@@ -24,7 +24,7 @@ def start_game(event):
         score.configure(text="Score: 00\n\nHighscore: " + highscore)
         canvas.delete("all")
         BALL_COLOR = [ "green"]
-        BRICK_COLOR = ["RosyBrown2", "bisque3", "DarkSeaGreen1"]
+        BRICK_COLOR = ["red", "green"]
         random.shuffle(BALL_COLOR)
         # Colour of the paddle
         paddle = Paddle(canvas, "blue")

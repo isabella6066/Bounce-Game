@@ -3,12 +3,13 @@ class Paddle:
         self.canvas = canvas
         # Paddle size x y axis
         self.id = canvas.create_rectangle(0, 0, 100, 10, fill=color)
-        self.canvas.move(self.id, 200, 485)
+        self.canvas.move(self.id, 0, 485)
         self.x = 0
         self.pausec=0
         self.canvas_width = canvas.winfo_width()
         self.canvas.bind_all("<Left>", self.turn_left)
         self.canvas.bind_all("<Right>", self.turn_right)
+        self.canvas.bind_all("<Down>", self.pauser)
         # TODO Pause the game, HINT: something similar as the line above can be done.
         
         
@@ -24,10 +25,10 @@ class Paddle:
 
     # How fast paddle should move to left or right
     def turn_left(self, event):
-        self.x = -7
+        self.x = -4
 
     def turn_right(self, event):
-        self.x =7
+        self.x =4
     
 
     def pauser(self,event):
